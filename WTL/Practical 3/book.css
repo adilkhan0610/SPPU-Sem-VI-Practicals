@@ -1,0 +1,36 @@
+CATALOG {
+display: block;
+background-color: #f5f9ff;
+width: 100%;
+text-align: center;
+padding: 10px;
+}
+
+BOOK {
+display: block;
+margin: 20px auto;
+padding: 10px;
+width: 60%;
+background-color: #e6f0ff;
+border: 1px solid #cccccc;
+}
+
+TITLE {
+display: block;
+color: #cc0000;
+font-size: 20pt;
+font-weight: bold;
+}
+
+AUTHOR {
+display: block;
+color: #0033cc;
+font-size: 16pt;
+}
+
+YEAR,
+PRICE {
+display: block;
+color: #333333;
+margin-top: 5px;
+}
