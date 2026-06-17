@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<hr>
+<br>
+
+<center>
+<h2>Shopping Cart Record</h2>
+</center>
+
+<div ng-app="myapp" ng-controller="CartForm">
+
+<center>
+
+<br>
+<hr>
+<br><br>
+
+<table border="10">
+
+<tr>
+<th>Description</th>
+<th>Qty</th>
+<th>Cost</th>
+<th>Total</th>
+<th>Remove</th>
+</tr>
+
+<tr ng-repeat="item in cart.items">
+
+<td>
+<input type="text" ng-model="item.description">
+</td>
+
+<td>
+<input type="number" ng-model="item.qty" required>
+</td>
+
+<td>
+<input type="number" ng-model="item.cost" required>
+</td>
+
+<td>
+{{item.qty * item.cost | currency:'Rs '}}
+</td>
+
+<td>
+[<a href="" ng-click="removeItem($index)">X</a>]
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<a href="" ng-click="addItem()">Add Item</a>
+</td>
+
+<td></td>
+
+<td>Total:</td>
+
+<td>
+{{total() | currency:'Rs '}}
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+</div>
+
+<script>
+
+var app = angular.module('myapp', []);
+
+app.controller('CartForm', function($scope) {
+
+$scope.cart = {
+
+items: [
+{
+qty: '',
+description: '',
+cost: ''
+}
+]
+
+};
+
+$scope.addItem = function() {
+
+$scope.cart.items.push({
+qty: '',
+description: '',
+cost: ''
+});
+
+};
+
+$scope.removeItem = function(index) {
+
+$scope.cart.items.splice(index, 1);
+
+};
+
+$scope.total = function() {
+
+var total = 0;
+
+angular.forEach($scope.cart.items, function(item) {
+
+total += (item.qty * item.cost) || 0;
+
+});
+
+return total;
+
+};
+
+});
+
+</script>
+
+</body>
+</html>
