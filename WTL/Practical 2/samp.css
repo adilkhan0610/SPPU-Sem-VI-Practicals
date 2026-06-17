@@ -1,0 +1,39 @@
+.con {
+width: 400px;
+height: auto;
+background-color: white;
+color: black;
+padding: 10px;
+margin: auto;
+border: 1px solid black;
+}
+
+.main {
+width: 100%;
+margin: auto;
+}
+
+.con1 {
+width: 100%;
+}
+
+.con2 {
+width: 100%;
+}
+
+/* Table alignment */
+table {
+margin: auto;
+}
+
+/* Input styling (basic) */
+input, select {
+margin: 5px;
+}
+
+/* Terms */
+#terms {
+text-align: center;
+color: blue;
+margin-top: 20px;
+}
