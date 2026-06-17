@@ -1,0 +1,14 @@
+CREATE DATABASE employee_crud;
+
+USE employee_crud;
+
+CREATE TABLE employees(
+EmployeeId INT AUTO_INCREMENT PRIMARY KEY,
+EmployeeName VARCHAR(100),
+City VARCHAR(100)
+);
+
+INSERT INTO employees(EmployeeName, City)
+VALUES
+('Adil', 'Pune'),
+('Atharva', 'Mumbai');
