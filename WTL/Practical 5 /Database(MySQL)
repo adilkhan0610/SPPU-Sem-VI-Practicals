@@ -1,0 +1,23 @@
+CREATE DATABASE stud;
+
+USE stud;
+
+CREATE TABLE reg(
+name VARCHAR(50),
+gender VARCHAR(20),
+email VARCHAR(50),
+college VARCHAR(50),
+branch VARCHAR(50),
+mobile VARCHAR(20),
+username VARCHAR(50),
+password VARCHAR(50)
+);
+
+CREATE TABLE info(
+name VARCHAR(50),
+address VARCHAR(50)
+);
+
+INSERT INTO info VALUES('Adil','Warje');
+INSERT INTO info VALUES('Atharva','Pimpri');
+INSERT INTO info VALUES('Yash','Vadgaon');
